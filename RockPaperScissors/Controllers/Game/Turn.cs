@@ -2,7 +2,7 @@
 
 namespace RockPaperScissors.Controllers.Game;
 
-public record TurnRequest(Guid GameId, Guid UserId, TurnOptions TurnOptions);
+public record TurnRequest(Guid GameId, Guid UserId, TurnOptions Turn);
 
 public record TurnResponse(
 	Guid WinnerId,

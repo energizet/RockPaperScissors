@@ -63,7 +63,7 @@ public class GameController : ControllerBase
 		}
 
 		var game = gameResult.Result!;
-		var roundResult = game.Turn(request.UserId, request.TurnOptions);
+		var roundResult = game.Turn(request.UserId, request.Turn);
 		if (roundResult.IsError)
 		{
 			return BadRequest(roundResult.Message);
@@ -81,10 +81,10 @@ public class GameController : ControllerBase
 		);
 	}
 
-	[HttpGet("stat")]
-	public ActionResult<StatResponse> Stat([FromQuery] StatRequest request)
+	[HttpGet("stat/{gameId}")]
+	public ActionResult<StatResponse> Stat(Guid gameId)
 	{
-		var gameResult = _gameService.Find(request.GameId);
+		var gameResult = _gameService.Find(gameId);
 		if (gameResult.IsError)
 		{
 			return BadRequest(gameResult.Message);
