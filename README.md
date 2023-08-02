@@ -1,7 +1,7 @@
 ﻿# Камень Ножницы Бумага
 
 > ### Установка и запуск
-> Скачать можно по ссылке https://github.com/energizet/RockPaperScissors/releases/tag/publish
+> Скачать можно по ссылке [https://github.com/energizet/RockPaperScissors/releases/tag/publish](https://github.com/energizet/RockPaperScissors/releases)
 > 
 > Запустить файл RockPaperScissors.exe
 
